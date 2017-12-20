@@ -21,7 +21,7 @@ browser.sleep(1000);
       var continueButt = element(by.css('.core-btn.core-primary'));
       helper.waitElementToBeVisisble(continueButt);
       continueButt.click();
-      browser.sleep(2000);
+      browser.sleep(4000);
 		});
 	});
 });
