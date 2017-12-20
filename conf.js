@@ -1,9 +1,9 @@
   // An Hertz configuration file.
 exports.config = {
   directConnect: true,
-  
+
   params: {
-      url: 'http://www.c2c-preprod.hertz.com'
+      url: 'http://www.c2c-qa.hertz.com'
   },
 
   // Capabilities to be passed to the webdriver instance.
