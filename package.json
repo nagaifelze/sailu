@@ -1,0 +1,35 @@
+{
+  "name": "sailu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "conf.js",
+  "scripts": {
+    "test": "protractor conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nagaifelze/sailu.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nagaifelze/sailu/issues"
+  },
+  "devDependencies": {
+    "astrolabe": "^0.3.6",
+    "eslint": "^4.14.0",
+    "eslint-config-google": "^0.9.1",
+    "exceljs": "^0.8.1",
+    "jasmine-allure-reporter": "^1.0.2",
+    "jasmine-reporters": "^2.2.1",
+    "protractor": "~5.2.2",
+    "selenium-webdriver": "^3.6.0",
+    "winston": "1.0.1"
+  },
+  "homepage": "https://github.com/nagaifelze/sailu#readme",
+  "dependencies": {
+    "protractor": "^5.2.2",
+    "path": "^0.12.7",
+    "promise": "^8.0.1"
+  }
+}

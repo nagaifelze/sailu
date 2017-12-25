@@ -5,7 +5,7 @@ exports.config = {
   params: {
       url: 'http://www.c2c-preprod.hertz.com'
   },
-  
+
   // Capabilities to be passed to the webdriver instance.
   capabilities: {
     'browserName': 'chrome'
@@ -24,6 +24,16 @@ exports.config = {
   },
   onPrepare: function() {
       browser.ignoreSynchronization = true;
+      var AllureReporter = require('jasmine-allure-reporter');
+      jasmine.getEnv().addReporter(new AllureReporter());
+      jasmine.getEnv().afterEach(function(done){
+          browser.takeScreenshot().then(function (png) {
+              allure.createAttachment('Screenshot', function () {
+                  return new Buffer(png, 'base64')
+              }, 'image/png')();
+              done();
+          })
+      });
   },
   suites: {
       home: 'pages/home/**/*.spec.js'
