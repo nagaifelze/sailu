@@ -1,4 +1,4 @@
-  // An Hertz configuration file.
+// An Hertz configuration file.
 exports.config = {
   directConnect: true,
 
@@ -37,5 +37,5 @@ exports.config = {
   },
   suites: {
       home: 'pages/home/**/*.spec.js'
-  },
+  }
 };

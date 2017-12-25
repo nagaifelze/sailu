@@ -30,6 +30,7 @@
     "jasmine-allure-reporter": "^1.0.2",
     "path": "^0.12.7",
     "promise": "^8.0.1",
-    "protractor": "^5.2.2"
+    "protractor": "^5.2.2",
+    "nodemailer": "^4.4.1"
   }
 }

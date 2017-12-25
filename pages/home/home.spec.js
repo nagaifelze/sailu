@@ -1,6 +1,12 @@
 var logger = require('./../../log.js');
+var mailer = require('./../../mail');
 HomePage = require('./home.po.js');
 
+afterEach(function() {
+    browser.manage().deleteAllCookies();
+    //console.log('sending mail.');
+    //mailer.sendEMail();
+});
 describe('Home page : ', function() {
 
     var homePage = new HomePage();
@@ -17,7 +23,7 @@ describe('Home page : ', function() {
     it('should have a title', function() {
         expect(browser.getTitle()).toEqual('Hertz');
     });
-    it('fill up the reservation form', function() {
+    xit('fill up the reservation form', function() {
     	//enter pickup location
     	homePage.enterLocation('Austin', homePage.pickUpLocBox);
     	logger.log('info','successfully entered pickup location Austin.');
