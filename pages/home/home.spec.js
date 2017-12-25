@@ -14,7 +14,9 @@ describe('Home page : ', function() {
     afterEach(function() {
 		browser.manage().deleteAllCookies();
     });
-
+    it('should have a title', function() {
+        expect(browser.getTitle()).toEqual('Super Calculator');
+    });
     it('fill up the reservation form', function() {
     	//enter pickup location
     	homePage.enterLocation('Austin', homePage.pickUpLocBox);
