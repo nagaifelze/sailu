@@ -3,7 +3,7 @@ exports.config = {
   directConnect: true,
 
   params: {
-      url: 'http://www.c2c-preprod.hertz.com'
+      env: 'preprod'
   },
 
   // Capabilities to be passed to the webdriver instance.

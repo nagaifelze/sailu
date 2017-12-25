@@ -1,0 +1,32 @@
+{
+  "site": {
+    "url": {
+      "qa": "http://www.c2c-qa.hertz.com",
+      "preprod": "http://www.c2c-preprod.hertz.com"
+    }
+  },
+  "page": {
+    "home": {
+      "location": {
+        "searchWord": {
+          "pickup": "Austin",
+          "dropOff": "Dallas"
+        },
+        "dropDownOption":{
+          "pickup": "Austin Bergstrom",
+          "dropOff": "Dallas Love"
+        }
+      },
+      "date": {
+        "day":{
+          "pickup": "27",
+          "dropOff": "29"
+        },
+        "time":{
+          "pickup": "06:00 PM",
+          "dropOff": "07:00 PM"
+        }
+      }
+    }
+  }
+}

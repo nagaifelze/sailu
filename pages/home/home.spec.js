@@ -1,12 +1,8 @@
-var logger = require('./../../log.js');
-var mailer = require('./../../mail');
+var logger = require('./../../logger.js');
+var Data = require('./../../Data');
+var helper = require('./../../helper');
 HomePage = require('./home.po.js');
 
-afterEach(function() {
-    browser.manage().deleteAllCookies();
-    //console.log('sending mail.');
-    //mailer.sendEMail();
-});
 describe('Home page : ', function() {
 
     var homePage = new HomePage();
@@ -14,51 +10,50 @@ describe('Home page : ', function() {
     beforeEach(function() {
     	logger.log('info','starting browser.');
 		browser.driver.manage().window().maximize();
-        browser.get(browser.params.url);
+        helper.openSite();
     });
-
     afterEach(function() {
-		browser.manage().deleteAllCookies();
+        browser.manage().deleteAllCookies();
     });
     it('should have a title', function() {
         expect(browser.getTitle()).toEqual('Hertz');
     });
-    xit('fill up the reservation form', function() {
+    it('fill up the reservation form', function() {
     	//enter pickup location
-    	homePage.enterLocation('Austin', homePage.pickUpLocBox);
-    	logger.log('info','successfully entered pickup location Austin.');
+    	homePage.enterLocation(Data.page.home.location.searchWord.pickup, homePage.pickUpLocBox);
+    	logger.log('info','successfully entered pickup location');
     	
     	//Select the pickup location from the auto suggestions
-    	homePage.selectPickOrDropOption('Austin Bergstrom');
-		logger.log('info','successfully selected the \'Austin Bergstrom\' option from pickup locations.');
+    	homePage.selectPickOrDropOption(Data.page.home.location.dropDownOption.pickup);
+		logger.log('info','successfully selected the option from pickup locations.');
 
 		//Click on drop off location
-    	homePage.enterLocation('Dallas', homePage.dropoffLocBox);
-    	logger.log('info','successfully entered dropoff location Dallas.');
+    	homePage.enterLocation(Data.page.home.location.searchWord.dropOff, homePage.dropoffLocBox);
+    	logger.log('info','successfully entered dropoff location');
 
     	//Select the pickup location from the auto suggestions
-    	homePage.selectPickOrDropOption('Dallas Love');
-    	logger.log('info','successfully selected the \'Dallas Love\' option from drop off locations.');
+    	homePage.selectPickOrDropOption(Data.page.home.location.dropDownOption.dropOff);
+    	logger.log('info','successfully selected the option from drop off locations.');
 
     	//click on the pickup date
     	homePage.clickOnDate(homePage.pickupDateBox);
     	logger.log('info','successfully clicked the pickup date.');
     	
-    	//select 27th as pickup date
-    	homePage.selectDateOrTime(homePage.pickupDayElem, "27");
-		logger.log('info','successfully selected 27th as the pickup date.');
+    	//select pickup date
+    	homePage.selectDateOrTime(homePage.pickupDayElem, Data.page.home.date.day.pickup);
+		logger.log('info','successfully selected the pickup date.');
 		
 		//select the pick up time
-		homePage.selectDateOrTime(homePage.pickupTimeElem, "06:00 PM");
-		logger.log('info','successfully selected 6 PM as the pickup time.');
+		homePage.selectDateOrTime(homePage.pickupTimeElem, Data.page.home.date.time.pickup);
+		logger.log('info','successfully selected the pickup time.');
 		
-		//select 29th as drop off date
-		homePage.selectDateOrTime(homePage.dropOffDayElem, "29");
-		logger.log('info','successfully selected 29th as the drop off date.');
+		//select drop off date
+		homePage.selectDateOrTime(homePage.dropOffDayElem, Data.page.home.date.day.dropOff);
+		logger.log('info','successfully selected the drop off date.');
 		
 		//select the drop off time
-		homePage.selectDateOrTime(homePage.dropOffTimeElem, "07:00 PM");
-		logger.log('info','successfully selected 6 PM as the drop off time.');
+		homePage.selectDateOrTime(homePage.dropOffTimeElem, Data.page.home.date.time.dropOff);
+		logger.log('info','successfully selected the drop off time.');
 		
 		//click on continue
 		homePage.clickOnContinue();
