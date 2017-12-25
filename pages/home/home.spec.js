@@ -15,7 +15,7 @@ describe('Home page : ', function() {
 		browser.manage().deleteAllCookies();
     });
     it('should have a title', function() {
-        expect(browser.getTitle()).toEqual('Super Calculator');
+        expect(browser.getTitle()).toEqual('Hertz');
     });
     it('fill up the reservation form', function() {
     	//enter pickup location
