@@ -1,6 +1,7 @@
 var logger = require('./../../logger.js');
 var Data = require('./../../Data');
 var helper = require('./../../helper');
+var using = require('jasmine-data-provider');
 HomePage = require('./home.po.js');
 
 describe('Home page : ', function() {
@@ -15,10 +16,13 @@ describe('Home page : ', function() {
     afterEach(function() {
         browser.manage().deleteAllCookies();
     });
-    it('should have a title', function() {
-        expect(browser.getTitle()).toEqual('Hertz');
+    using([{title:Data.site.invalidTitle}, {title:Data.site.validTitle}], function (data) {
+        logger.log('info','Testing title..');
+    	it('should have a title', function () {
+            expect(browser.getTitle()).toEqual(data.title);
+        });
     });
-    it('fill up the reservation form', function() {
+    xit('fill up the reservation form', function() {
     	//enter pickup location
     	homePage.enterLocation(Data.page.home.location.searchWord.pickup, homePage.pickUpLocBox);
     	logger.log('info','successfully entered pickup location');

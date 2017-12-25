@@ -18,12 +18,7 @@
   "devDependencies": {
     "astrolabe": "^0.3.6",
     "eslint": "^4.14.0",
-    "eslint-config-google": "^0.9.1",
-    "exceljs": "^0.8.1",
-    "jasmine-reporters": "^2.2.1",
-    "protractor": "~5.2.2",
-    "selenium-webdriver": "^3.6.0",
-    "winston": "1.0.1"
+    "eslint-config-google": "^0.9.1"
   },
   "homepage": "https://github.com/nagaifelze/sailu#readme",
   "dependencies": {
@@ -31,6 +26,11 @@
     "path": "^0.12.7",
     "promise": "^8.0.1",
     "protractor": "^5.2.2",
-    "nodemailer": "^4.4.1"
+    "nodemailer": "^4.4.1",
+    "jasmine-data-provider": "^2.2.0",
+    "exceljs": "^0.8.1",
+    "jasmine-reporters": "^2.2.1",
+    "selenium-webdriver": "^3.6.0",
+    "winston": "1.0.1"
   }
 }

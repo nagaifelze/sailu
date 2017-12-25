@@ -1,5 +1,7 @@
 {
   "site": {
+    "validTitle": "Hertz",
+    "invalidTitle": "Hertzz",
     "url": {
       "qa": "http://www.c2c-qa.hertz.com",
       "preprod": "http://www.c2c-preprod.hertz.com"
