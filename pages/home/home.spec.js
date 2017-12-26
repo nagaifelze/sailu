@@ -22,7 +22,7 @@ describe('Home page : ', function() {
             expect(browser.getTitle()).toEqual(data.title);
         });
     });
-    xit('fill up the reservation form', function() {
+    it('fill up the reservation form', function() {
     	//enter pickup location
     	homePage.enterLocation(Data.page.home.location.searchWord.pickup, homePage.pickUpLocBox);
     	logger.log('info','successfully entered pickup location');
@@ -59,8 +59,8 @@ describe('Home page : ', function() {
 		homePage.selectDateOrTime(homePage.dropOffTimeElem, Data.page.home.date.time.dropOff);
 		logger.log('info','successfully selected the drop off time.');
 		
-		//click on continue
-		homePage.clickOnContinue();
+		//click on continue and check the choose your car page title
+		expect(homePage.clickOnContinue().getTitle()).toBe(Data.page.choose_car.title);
 		
 		browser.sleep(4000);
     });

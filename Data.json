@@ -29,6 +29,9 @@
           "dropOff": "07:00 PM"
         }
       }
+    },
+    "choose_car":{
+      "title": "Choose Your Car"
     }
   }
 }

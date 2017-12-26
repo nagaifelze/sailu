@@ -45,6 +45,7 @@ var HomePage = function() {
     this.clickOnContinue = function(){
     	helper.waitElementToBeClickable(this.continueButt);
         this.continueButt.click();
+        return require('./../vehicles/choose_car.po');
     }
 }
 module.exports = HomePage;
