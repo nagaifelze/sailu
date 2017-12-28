@@ -2,16 +2,13 @@ var logger = require('./../../logger.js');
 var Data = require('./../../Data');
 var helper = require('./../../helper');
 var using = require('jasmine-data-provider');
-HomePage = require('./home.po.js');
+var homePage = require('./home.po.js');
+require('./../vehicles/choose_car.po');
 
 describe('Home page : ', function() {
 
-    var homePage = new HomePage();
-
     beforeEach(function() {
-    	logger.log('info','starting browser.');
-		browser.driver.manage().window().maximize();
-        helper.openSite();
+        helper.goToPage(Data.page.home.url);
     });
     afterEach(function() {
         browser.manage().deleteAllCookies();
@@ -35,7 +32,7 @@ describe('Home page : ', function() {
     	homePage.enterLocation(Data.page.home.location.searchWord.dropOff, homePage.dropoffLocBox);
     	logger.log('info','successfully entered dropoff location');
 
-    	//Select the pickup location from the auto suggestions
+    	//Select the dropoff location from the auto suggestions
     	homePage.selectPickOrDropOption(Data.page.home.location.dropDownOption.dropOff);
     	logger.log('info','successfully selected the option from drop off locations.');
 
@@ -60,7 +57,7 @@ describe('Home page : ', function() {
 		logger.log('info','successfully selected the drop off time.');
 		
 		//click on continue and check the choose your car page title
-		expect(homePage.clickOnContinue().getTitle()).toBe(Data.page.choose_car.title);
+		expect(homePage.clickOnContinue().getVPTitle()).toBe(Data.page.choose_car.title);
 		
 		browser.sleep(4000);
     });

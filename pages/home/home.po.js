@@ -1,50 +1,51 @@
 var helper = require('../../helper');
 
-var HomePage = function() {
-	this.pickUpLocBox = $('hertz-pickup-location .input-container-content input');
-	this.pickupDateBox = $('hertz-pickup-date .select-top-static-value');
-	this.pickupDayElem = $$('hertz-pickup-date .datepicker-calendar-year-month-week-day');
-	this.pickupTimeElem = $$('hertz-pickup-time core-timepicker .option');
-	this.dropoffLocBox = $('hertz-dropoff-location .input-container-content input');
-	this.dropoffDateBox = $('hertz-dropoff-date .select-top-static-value');
-	this.dropOffDayElem = $$('hertz-dropoff-date .datepicker-calendar-year-month-week-day');
-	this.dropOffTimeElem = $$('hertz-dropoff-time core-timepicker .option');
-	this.locationList = $$('hertz-location-list li');
-	this.continueButt = element(by.buttonText('Continue'));
+var HomePage =  {
+	pickUpLocBox : $('hertz-pickup-location .input-container-content input'),
+	pickupDateBox : $('hertz-pickup-date .select-top-static-value'),
+	pickupDayElem : $$('hertz-pickup-date .datepicker-calendar-year-month-week-day'),
+	pickupTimeElem : $$('hertz-pickup-time core-timepicker .option'),
+	dropoffLocBox : $('hertz-dropoff-location .input-container-content input'),
+	dropoffDateBox : $('hertz-dropoff-date .select-top-static-value'),
+	dropOffDayElem : $$('hertz-dropoff-date .datepicker-calendar-year-month-week-day'),
+	dropOffTimeElem : $$('hertz-dropoff-time core-timepicker .option'),
+	locationList : $$('hertz-location-list li'),
+	continueButt : element(by.buttonText('Continue')),
 
-    this.enterLocation = function(locationName, locationElement) {
+    enterLocation : function(locationName, locationElement) {
         helper.waitElementToBeClickable(locationElement);
         locationElement.sendKeys(locationName);
         browser.sleep(500);
-    }
+    },
 
-	this.clickOnDate = function(dateElement) {
+	clickOnDate : function(dateElement) {
         helper.waitElementToBeClickable(dateElement);
         dateElement.click();
         browser.sleep(500);
-    }
+    },
 
-    this.selectPickOrDropOption = function(option){
+    selectPickOrDropOption : function(option){
     	this.locationList.filter(function(elem, index) {
 			  return elem.getText().then(function(text) {
 			    return text.includes(option) === true;
 			  });
 			}).first().click();
     	browser.sleep(500);
-    }
+    },
     
-    this.selectDateOrTime = function(array, dateOrTime){
+    selectDateOrTime : function(array, dateOrTime){
     	array.filter(function(elem, index) {
 			  return elem.getText().then(function(text) {
 			    return text === dateOrTime;
 			  });
 			}).first().click();
     	browser.sleep(500);
-    }
+    },
     
-    this.clickOnContinue = function(){
+    clickOnContinue : function(){
     	helper.waitElementToBeClickable(this.continueButt);
         this.continueButt.click();
+        browser.sleep(1000);
         return require('./../vehicles/choose_car.po');
     }
 }

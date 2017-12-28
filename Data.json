@@ -9,6 +9,7 @@
   },
   "page": {
     "home": {
+      "url": "/",
       "location": {
         "searchWord": {
           "pickup": "Austin",
@@ -21,8 +22,8 @@
       },
       "date": {
         "day":{
-          "pickup": "27",
-          "dropOff": "29"
+          "pickup": "29",
+          "dropOff": "31"
         },
         "time":{
           "pickup": "06:00 PM",
@@ -31,6 +32,7 @@
       }
     },
     "choose_car":{
+      "url": "/vehicles",
       "title": "Choose Your Car"
     }
   }

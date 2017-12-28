@@ -1,8 +1,7 @@
 var helper = require('../../helper');
-
-var ChooseCar = function() {
-    this.pageTitle = $('.vehicle-page-title');
-    this.getTitle = function(){
+var ChooseCar = {
+    pageTitle : $('.vehicles-content-header-title'),
+    getVPTitle : function(){
         return this.pageTitle.getText();
     }
 };

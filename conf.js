@@ -1,4 +1,6 @@
 // An Hertz configuration file.
+const HtmlScreenshotReporter = require("protractor-jasmine2-screenshot-reporter");
+const JasmineReporters = require('jasmine-reporters');
 exports.config = {
   directConnect: true,
 
@@ -24,6 +26,8 @@ exports.config = {
   },
   onPrepare: function() {
       browser.ignoreSynchronization = true;
+      browser.driver.manage().window().setSize(1280, 1024);
+      //Allure
       var AllureReporter = require('jasmine-allure-reporter');
       jasmine.getEnv().addReporter(new AllureReporter());
       jasmine.getEnv().afterEach(function(done){
@@ -32,8 +36,16 @@ exports.config = {
                   return new Buffer(png, 'base64')
               }, 'image/png')();
               done();
-          })
+          });
       });
+      //Html
+      /*jasmine.getEnv().addReporter(new JasmineReporters.JUnitXmlReporter({
+          savePath: 'target/reports/e2e',
+          consolidateAll: false
+      }));
+      jasmine.getEnv().addReporter(new HtmlScreenshotReporter({
+          dest: "target/reports/e2e/screenshots"
+      }));*/
   },
   suites: {
       home: 'pages/home/**/*.spec.js'
