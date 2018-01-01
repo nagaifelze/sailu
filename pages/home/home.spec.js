@@ -3,19 +3,18 @@ var Data = require('./../../Data');
 var helper = require('./../../helper');
 var using = require('jasmine-data-provider');
 var homePage = require('./home.po.js');
-require('./../vehicles/choose_car.po');
 
 describe('Home page : ', function() {
 
-    beforeEach(function() {
+    beforeAll(function() {
         helper.goToPage(Data.page.home.url);
     });
-    afterEach(function() {
+    afterAll(function() {
         browser.manage().deleteAllCookies();
     });
     using([{title:Data.site.invalidTitle}, {title:Data.site.validTitle}], function (data) {
         logger.log('info','Testing title..');
-    	it('should have a title', function () {
+    	it('Test title', function () {
             expect(browser.getTitle()).toEqual(data.title);
         });
     });

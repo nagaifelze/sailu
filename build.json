@@ -1,0 +1,9 @@
+{
+  "env": "preprod",
+  "qa": {
+    "siteBaseUrl": "http://www.c2c-qa.hertz.com"
+  },
+  "preprod":{
+    "siteBaseUrl": "http://www.c2c-preprod.hertz.com"
+  }
+}

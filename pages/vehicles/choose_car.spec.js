@@ -5,11 +5,11 @@ var chooseCar = require('./choose_car.po');
 
 describe('Choose your car :', function() {
 
-    beforeEach(function() {
+    beforeAll(function() {
         logger.log('info','starting browser.');
         helper.goToPage(Data.page.choose_car.url);
     });
-    afterEach(function() {
+    afterAll(function() {
         browser.manage().deleteAllCookies();
     });
     it('should have title', function () {

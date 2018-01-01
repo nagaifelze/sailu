@@ -1,4 +1,5 @@
 var Data = require('./Data');
+var build = require('./build');
 var logger = require('./logger.js');
 var EC = protractor.ExpectedConditions;
 
@@ -89,11 +90,11 @@ var setBrowserParams = function () {
 var goToPage = function (pagePath) {
     logger.log('info','opening the page :' + pagePath);
     var url = "";
-    var env = browser.params.env;
+    var env = build.env;
     if(env === "preprod")
-        url = Data.site.url.preprod;
+        url = build.preprod.siteBaseUrl;
     else if(env === "qa")
-        url = Data.site.url.qa;
+        url = build.qa.siteBaseUrl;
     url = url + pagePath;
     browser.get(url);
 }
