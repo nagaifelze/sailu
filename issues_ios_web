@@ -154,3 +154,22 @@ webmac07:AutomationSourceCode_iOS_Hertz-master developer$ protractor conf.js
     at require (internal/module.js:11:18)
 [18:34:26] E/launcher - Process exited with error code 100
 webmac07:AutomationSourceCode_iOS_Hertz-master developer$ 
+
+9.error9
+webmac07:AutomationSourceCode_iOS_Hertz-master developer$ protractor conf.js
+(node:28010) [DEP0022] DeprecationWarning: os.tmpDir() is deprecated. Use os.tmpdir() instead.
+[18:43:58] I/launcher - Running 1 instances of WebDriver
+[18:43:58] I/hosted - Using the selenium server at http://localhost:4723/wd/hub
+[18:44:16] E/launcher - Error: Error: Cannot find module './MobileActions.pageObject'
+    at Function.Module._resolveFilename (module.js:555:15)
+    at Function.Module._load (module.js:482:25)
+    at Module.require (module.js:604:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/Users/developer/sailu/AutomationSourceCode_iOS_Hertz-master/Protractor/e2e/hertzReservationPage/hertzVechiclePage/hertzPayLaterCheckoutMobileSpec.js:3:15)
+    at Module._compile (module.js:660:30)
+    at Object.Module._extensions..js (module.js:671:10)
+    at Module.load (module.js:573:32)
+    at tryModuleLoad (module.js:513:12)
+    at Function.Module._load (module.js:505:3)
+[18:44:16] E/launcher - Process exited with error code 100
+webmac07:AutomationSourceCode_iOS_Hertz-master developer$ 
