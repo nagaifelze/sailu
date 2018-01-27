@@ -21,3 +21,22 @@ drwx------   3 developer  staff   102 Dec 22 09:46 .
 drwxr-xr-x+ 42 developer  staff  1428 Jan 27 10:44 ..
 -rw-r--r--   1 developer  staff   626 Jan 27 17:11 known_hosts
 webmac07:AutomationSourceCode_iOS_Hertz-master developer$ 
+
+2. erro2
+webmac07:AutomationSourceCode_iOS_Hertz-master developer$ protractor conf.js
+(node:21143) [DEP0022] DeprecationWarning: os.tmpDir() is deprecated. Use os.tmpdir() instead.
+[17:43:27] I/launcher - Running 1 instances of WebDriver
+[17:43:27] I/hosted - Using the selenium server at http://localhost:4723/wd/hub
+[17:52:57] E/launcher - Error: Error: Cannot find module './../../object-Repo/ObjectsPropertyReader.json'
+    at Function.Module._resolveFilename (module.js:555:15)
+    at Function.Module._load (module.js:482:25)
+    at Module.require (module.js:604:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/Users/developer/sailu/AutomationSourceCode_iOS_Hertz-master/Protractor/e2e/hertzReservationPage/hertzMobileReservationsSpec.js:5:16)
+    at Module._compile (module.js:660:30)
+    at Object.Module._extensions..js (module.js:671:10)
+    at Module.load (module.js:573:32)
+    at tryModuleLoad (module.js:513:12)
+    at Function.Module._load (module.js:505:3)
+[17:52:57] E/launcher - Process exited with error code 100
+webmac07:AutomationSourceCode_iOS_Hertz-master developer$ 
