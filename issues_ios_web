@@ -195,20 +195,19 @@ webmac07:AutomationSourceCode_iOS_Hertz-master developer$
 
 11.error11
 webmac07:AutomationSourceCode_iOS_Hertz-master developer$ protractor conf.js
-(node:28981) [DEP0022] DeprecationWarning: os.tmpDir() is deprecated. Use os.tmpdir() instead.
-[18:51:14] I/launcher - Running 1 instances of WebDriver
-[18:51:14] I/hosted - Using the selenium server at http://localhost:4723/wd/hub
-[18:51:35] E/launcher - Error: Error: Cannot find module './hertzVechiclePage/hertzReservationAncillaries.pageObject'
+(node:29593) [DEP0022] DeprecationWarning: os.tmpDir() is deprecated. Use os.tmpdir() instead.
+[18:54:30] I/launcher - Running 1 instances of WebDriver
+[18:54:30] I/hosted - Using the selenium server at http://localhost:4723/wd/hub
+[18:57:05] E/launcher - Error: Error: Cannot find module './../hertzMakeReservationVehiclePage/hertzReservationAncillaries.pageObject'
     at Function.Module._resolveFilename (module.js:555:15)
     at Function.Module._load (module.js:482:25)
     at Module.require (module.js:604:17)
     at require (internal/module.js:11:18)
-    at Object.<anonymous> (/Users/developer/sailu/AutomationSourceCode_iOS_Hertz-master/Protractor/e2e/hertzReservationPage/hertzVechiclePage/tripSummaryEditPickUpDropOffInformationMobileSpec.js:8:40)
+    at Object.<anonymous> (/Users/developer/sailu/AutomationSourceCode_iOS_Hertz-master/Protractor/e2e/hertzReservationPage/hertzMakeReservationAncillaryPage/tripSummaryEditPickUpDropOffInformationSpec.js:5:40)
     at Module._compile (module.js:660:30)
     at Object.Module._extensions..js (module.js:671:10)
     at Module.load (module.js:573:32)
     at tryModuleLoad (module.js:513:12)
     at Function.Module._load (module.js:505:3)
-[18:51:35] E/launcher - Process exited with error code 100
+[18:57:05] E/launcher - Process exited with error code 100
 webmac07:AutomationSourceCode_iOS_Hertz-master developer$ 
-
