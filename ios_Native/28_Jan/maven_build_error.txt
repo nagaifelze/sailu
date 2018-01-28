@@ -1,0 +1,23 @@
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building c2c_ios_test_automation 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] Downloading: http://nexus-1577443272.us-west-2.elb.amazonaws.com/repository/hertz-microservice-releases/com/saucelabs/saucerest/1.0.16/saucerest-1.0.16.pom
+[INFO] Downloading: http://nexus-1577443272.us-west-2.elb.amazonaws.com/repository/hertz-microservice-snapshots/com/saucelabs/saucerest/1.0.16/saucerest-1.0.16.pom
+[INFO] Downloading: http://nexus-1577443272.us-west-2.elb.amazonaws.com/repository/hertz-microservice-releases/com/saucelabs/sauce_junit/2.1.3/sauce_junit-2.1.3.pom
+[INFO] Downloading: http://nexus-1577443272.us-west-2.elb.amazonaws.com/repository/hertz-microservice-snapshots/com/saucelabs/sauce_junit/2.1.3/sauce_junit-2.1.3.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.145 s
+[INFO] Finished at: 2018-01-28T17:46:23-05:00
+[INFO] Final Memory: 8M/81M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project c2c_ios_test_automation: Could not resolve dependencies for project appium:c2c_ios_test_automation:jar:0.0.1-SNAPSHOT: Failed to collect dependencies at com.saucelabs:saucerest:jar:1.0.16: Failed to read artifact descriptor for com.saucelabs:saucerest:jar:1.0.16: Could not transfer artifact com.saucelabs:saucerest:pom:1.0.16 from/to nexus-snapshots (http://nexus-1577443272.us-west-2.elb.amazonaws.com/repository/hertz-microservice-snapshots/): Failed to transfer http://nexus-1577443272.us-west-2.elb.amazonaws.com/repository/hertz-microservice-snapshots/com/saucelabs/saucerest/1.0.16/saucerest-1.0.16.pom. Error code 400, Repository version policy: SNAPSHOT does not allow version: 1.0.16 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
