@@ -1,1 +1,4 @@
 aapt dumb badging  app-hertz-preprod-1.11.12.apk
+
+mvn -Dtest=AndroidSprint6Test clean test -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true
+
