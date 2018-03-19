@@ -1,6 +1,7 @@
 1. download scripts: https://github.c2c.us-south.bluemix.net/C2C/mobile-test/tree/native_app_automation
 2. import code to eclipse
-3. make sure below capabilities in AppiumTest.java
+3. download latest .ipa file from hokey app
+4. make sure below capabilities in AppiumTest.java
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("appium-version", "1.7.2");
         capabilities.setCapability("automationName","XCUITest");
@@ -14,16 +15,17 @@
         capabilities.setCapability("name", "C2C iOS Test Automation " + date);
         String userDir = System.getProperty("user.dir");
         String localApp = "hertz-RAC.ipa";
-4. connect iPhone
-5. open iTunes
-6. open Xcode app
-7. open terminal 
-8. export PATH=/Users/developer/sailu/apache-maven-3.5.2/bin:$PATH
-9. export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home
-10.  export PATH=$JAVA_HOME/bin:$PATH
-11. RUN command : apppium
-12. Open new terminal
-13. repeat steps 3,4,5
-14. go to project root directory
-15. cd /Users/developer/sailu/mobile-test-native_app_automation/ios-appium-test
-16. mvn -Dtest=iOSEpicSet10 clean test
+4. make sure that localApp name matches with the .ipa file name you have downloaded
+5. connect iPhone
+6. open iTunes
+7. open Xcode app
+8. open terminal 
+9. export PATH=/Users/developer/sailu/apache-maven-3.5.2/bin:$PATH
+10. export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home
+11.  export PATH=$JAVA_HOME/bin:$PATH
+12. RUN command : apppium
+13. Open new terminal
+14. repeat steps 3,4,5
+15. go to project root directory
+16. cd /Users/developer/sailu/mobile-test-native_app_automation/ios-appium-test
+17. mvn -Dtest=iOSEpicSet10 clean test
