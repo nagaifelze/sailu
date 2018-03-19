@@ -1,0 +1,26 @@
+1. open Xcode app
+2. open terminal 
+    3.  export PATH=/Users/developer/sailu/apache-maven-3.5.2/bin:$PATH
+   4.  export PATH=$JAVA_HOME/bin:$PATH
+ 5. export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home
+6. RUN command : apppium
+7. Open new terminal
+8. repeat steps 3,4,5
+9. go to project root directory
+10. cd /Users/developer/sailu/mobile-test-native_app_automation/ios-appium-test
+11. make sure below capabilities 
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("appium-version", "1.7.2");
+        capabilities.setCapability("automationName","XCUITest");
+        capabilities.setCapability("platformName", "ios");
+        capabilities.setCapability("platformVersion", "11.0.2");
+//        capabilities.setCapability("deviceName", "iPhone Simulator");
+        capabilities.setCapability("deviceName", "Arun's QA iPhone");
+        capabilities.setCapability("udid", "7d04fcaab0cf3100defbf421da6c4febe3944176");
+
+        // Set job name on Sauce Labs
+        capabilities.setCapability("name", "C2C iOS Test Automation " + date);
+        String userDir = System.getProperty("user.dir");
+        String localApp = "hertz-RAC.ipa";
+12. mvn -Dtest=iOSEpicSet10 clean test
+
