@@ -16,16 +16,18 @@
         String userDir = System.getProperty("user.dir");
         String localApp = "hertz-RAC.ipa";
 4. make sure that localApp name matches with the .ipa file name you have downloaded
-5. connect iPhone
-6. open iTunes
-7. open Xcode app
-8. open terminal 
-9. export PATH=/Users/developer/sailu/apache-maven-3.5.2/bin:$PATH
-10. export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home
-11.  export PATH=$JAVA_HOME/bin:$PATH
-12. RUN command : apppium
-13. Open new terminal
-14. repeat steps 3,4,5
-15. go to project root directory
-16. cd /Users/developer/sailu/mobile-test-native_app_automation/ios-appium-test
-17. mvn -Dtest=iOSEpicSet10 clean test
+5. Make sure that appium-version is same as displayed in the appium server console 
+6. Make sure that you update the platformVersion, deviceName and udid from iTunes app
+7. connect iPhone
+8. open iTunes
+9. open Xcode app
+10. open terminal 
+11. export PATH=/Users/developer/sailu/apache-maven-3.5.2/bin:$PATH
+12. export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home
+13.  export PATH=$JAVA_HOME/bin:$PATH
+14. RUN command : apppium
+15. Open new terminal
+16. repeat steps 3,4,5
+17. go to project root directory
+18. cd /Users/developer/sailu/mobile-test-native_app_automation/ios-appium-test
+19. mvn -Dtest=iOSEpicSet10 clean test
